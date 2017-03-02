@@ -1,0 +1,85 @@
+.c-social {
+  position: relative;
+
+  &::before {
+    content: "";
+    background: $color-oxford-blue;
+    height: 100%;
+    width: 110%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(-1deg);
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    background: url("../img/command-line-balloons-2.png") repeat-x center;
+    height: 100%;
+    width: 110%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(-1deg);
+    z-index: -1;
+    opacity: .2;
+  }
+
+  &__icons {
+    padding-bottom: 10px;
+
+    &__icon {
+      color: $color-jade;
+      display: inline-block;
+      position: relative;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      font-size: 50px;
+      top: 0;
+      transition: $g-transition-duration;
+
+      &:hover {
+        top: -15px;
+      }
+
+      &::before {
+        content: "\e907";
+        font-family: "icon", sans-serif;
+        position: absolute;
+        font-size: 140px;
+        left: 50%;
+        top: 8px;
+        transform: translateX(-50%);
+        pointer-events: none;
+      }
+
+      a {
+        display: block;
+
+        &:hover {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .c-social {
+    &__icons {
+      &__icon {
+        width: 60px;
+        font-size: 26px;
+
+        &::before {
+          font-size: 90px;
+        }
+      }
+    }
+  }
+}

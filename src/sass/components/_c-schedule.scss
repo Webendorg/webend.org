@@ -1,0 +1,60 @@
+.c-schedule {
+  position: relative;
+  padding: 150px 0;
+
+  &::before {
+    content: "";
+    background: $color-outer-space url("../img/command-line-balloons.png") no-repeat center;
+    height: 100%;
+    width: 110%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(1deg);
+    z-index: -1;
+  }
+
+  &__list {
+    &__item {
+      text-align: center;
+      color: $color-white;
+      padding: 0 50px;
+      outline: none;
+      cursor: default;
+
+      &__time {
+        font-size: 17px;
+      }
+
+      &__title {
+        font-size: 33px;
+        font-family: "Montserrat", Helvetica, Arial, sans-serif;
+        color: $color-white;
+        font-weight: normal;
+      }
+
+      &__location {
+        font-size: 18px;
+        margin-top: 20px;
+        padding-top: 25px;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 0;
+          transform: translateX(-50%);
+          background: $color-white;
+          height: 5px;
+          width: 50px;
+        }
+      }
+    }
+  }
+
+  .slick-arrow {
+    font-size: 60px;
+  }
+}

@@ -1,0 +1,16 @@
+.c-form-control {
+  @include form-control-block();
+  @include form-control-modifier();
+
+  &[disabled] {
+    opacity: .5;
+    background-color: $c-input-bg-color-disabled;
+  }
+
+  &--textarea {
+    height: auto;
+    resize: none;
+    overflow: auto;
+  }
+
+}

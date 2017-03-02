@@ -1,0 +1,53 @@
+
+$c-selectbox-font-size: $input-font-size;
+$c-selectbox-arrow-size: 18px;
+$c-selectbox-arrow-gap: 6px;
+$c-selectbox-bg-color: $input-bg-color;
+$c-selectbox-bg-disabled-color: $color-ghost;
+$c-selectbox-color: $input-color;
+$c-selectbox-border-width: $input-border-width;
+$c-selectbox-border-color: $input-border-color;
+$c-selectbox-border-radius: $input-border-radius;
+$c-selectbox-padding-ends: $input-padding-vertical;
+$c-selectbox-padding-left: $input-padding-horizontal;
+$c-selectbox-padding-right: ($c-selectbox-arrow-size + ($c-selectbox-arrow-gap * 1.5) + $c-selectbox-border-width);
+
+.c-selectbox {
+  display: inline-block;
+  padding: $c-selectbox-padding-ends $c-selectbox-padding-right $c-selectbox-padding-ends $c-selectbox-padding-left;
+  font-size: $c-selectbox-font-size;
+  border-width: $c-selectbox-border-width;
+  border-style: solid;
+  color: $c-selectbox-color;
+  background-color: $c-selectbox-bg-color;
+  border-color: $c-selectbox-border-color;
+  border-radius: $c-selectbox-border-radius;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZmlsbD0iI2FhYSIgZD0iTTkuODc1IDEwLjQzOEwxNiAxNi41NjNsNi4xMjUtNi4xMjVMMjQgMTIuMzEzbC04IDgtOC04eiIvPjwvc3ZnPg==);
+  background-size: $c-selectbox-arrow-size $c-selectbox-arrow-size;
+  background-repeat: no-repeat;
+  background-position: right ($c-selectbox-arrow-gap + $c-selectbox-border-width) center;
+  cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  &:focus {
+    outline: none;
+
+    &::-ms-value {
+      color: $c-selectbox-color;
+      background-color: $c-selectbox-bg-color;
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: .5;
+    background-color: $c-selectbox-bg-disabled-color;
+  }
+
+  &::-ms-expand {
+    opacity: 0;
+  }
+
+}
+
