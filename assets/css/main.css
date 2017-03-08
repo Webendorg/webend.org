@@ -2280,11 +2280,11 @@ small,
   .c-button:hover, .c-button:focus {
     text-decoration: none; }
   .c-button--primary {
-    background-color: #008cba;
+    background-color: #00b26f;
     color: #fff;
     border-radius: 3px; }
     .c-button--primary:hover, .c-button--primary:focus {
-      background-color: #007095;
+      background-color: #008e59;
       color: #fff; }
   .c-button--secondary {
     background-color: #e7e7e7;
@@ -2430,13 +2430,15 @@ small,
         text-align: center; }
       .c-header__register__form__group .icon {
         position: absolute;
-        right: 10px;
+        right: 5px;
         top: 50%;
         transform: translateY(-50%);
         font-size: 30px;
         color: #fff;
         line-height: 30px;
         cursor: pointer; }
+      .c-header__register__form__group .c-button {
+        padding-right: 40px; }
     .c-header__register__instruction .icon {
       border-right: 1px solid rgba(255, 255, 255, 0.55);
       color: #fff;
@@ -2865,13 +2867,15 @@ small,
       padding: 10px; }
     .c-contact__form__group .icon {
       position: absolute;
-      right: 10px;
+      right: 5px;
       top: 50%;
       transform: translateY(-50%);
       font-size: 30px;
-      color: #00b26f;
+      color: #fff;
       line-height: 30px;
       cursor: pointer; }
+    .c-contact__form__group .c-button {
+      padding-right: 40px; }
   .c-contact__instruction .icon {
     border-right: 1px solid rgba(151, 151, 151, 0.55);
     color: #00b26f;

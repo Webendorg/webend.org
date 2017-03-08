@@ -78,45 +78,8 @@ $(function () {
     $(this).closest(".slick-slider").slick("slickGoTo", slideIndex);
   });
 
-  $(".c-contact__form").slick({
-    slidesToShow: 1,
-    arrows: false,
-    infinite: false
-  });
-
-  $(".c-header__register__form").slick({
-    slidesToShow: 1,
-    arrows: false,
-    infinite: false
-  });
-
   $(".c-places__button").click(function () {
     $(".c-places__list").toggleClass("active");
-  });
-
-  var formCheck = function formCheck(element, event) {
-    if (element.validity.valid) {
-      $(element).closest(".slick-slider").slick("slickNext");
-
-      if ($(element).closest(".slick-slide").is(":last-child")) {
-        console.log("form gönderilecek");
-        $("input").unbind("keydown", inputKeyDown);
-      }
-    } else {
-      element.reportValidity();
-    }
-  };
-
-  var inputKeyDown = function inputKeyDown() {
-    if (event.which === 13 || event.metaKey) {
-      formCheck(this, event);
-    }
-  };
-
-  $("input").keydown(inputKeyDown);
-
-  $("input + .icon").click(function (event) {
-    formCheck($(this).prev("input")[0], event);
   });
 
   $(".c-header .c-header__button").click(function () {
@@ -127,8 +90,8 @@ $(function () {
     $(".c-header").removeClass("form-open");
   });
 
-  $(".c-header__register__form, .c-contact__form").on("afterChange", function () {
-    $(this).find(".slick-current.slick-active input").focus();
+  $(".contact-form").submit(function (event) {
+    event.preventDefault();
   });
 
   $(".fancybox").fancybox({
