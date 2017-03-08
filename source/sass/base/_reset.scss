@@ -1,0 +1,17 @@
+// scss-lint:disable VendorPrefix
+
+body,
+input,
+textarea,
+select,
+button {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga", "kern";
+  -webkit-font-feature-settings: "liga", "kern";
+  -moz-font-feature-settings: "liga", "kern";
+  font-kerning: normal;
+  -webkit-font-kerning: normal;
+  -moz-font-kerning: normal;
+}

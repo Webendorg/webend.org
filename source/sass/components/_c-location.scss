@@ -1,0 +1,43 @@
+.c-location {
+  position: relative;
+  transform: skewY(-.5deg);
+  transform-origin: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: $color-black;
+    opacity: .55;
+  }
+
+  &__icon {
+    img {
+      display: inline-block;
+    }
+  }
+
+  &__text {
+    font-size: 28px;
+    color: $color-white;
+  }
+
+  &__button {
+    top: 150px;
+    background: $color-jade;
+    border-radius: 5px;
+    font-weight: bold;
+    color: $color-white;
+    font-size: 14px;
+    height: 65px;
+    line-height: 25px;
+    padding: 20px 30px;
+    box-shadow: 0 2px 4px $color-jade;
+  }
+}

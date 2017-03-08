@@ -1,0 +1,115 @@
+
+
+@mixin btn-block($ease:true) {
+
+  @if ($ease == true) {
+    transition: background-color $g-transition-duration;
+  }
+
+  position: relative;
+  display: inline-block;
+  padding: $c-button-padding-vertical $c-button-padding-horizontal;
+  border-width: 0;
+  font-family: $c-button-font-family;
+  font-size: $c-button-font-size;
+  line-height: $c-button-line-height;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+
+
+@mixin btn-size($padding-v:$c-button-padding-vertical, $padding-h:$c-button-padding-horizontal, $font-size:null) {
+
+
+  @if $padding-v {
+    @if $padding-h {
+      padding: $padding-v $padding-h;
+    } @else {
+      padding-top: $padding-v;
+      padding-bottom: $padding-v;
+    }
+  } @else {
+    padding-left: $padding-h;
+    padding-right: $padding-h;
+  }
+
+  font-size: $font-size;
+}
+
+
+
+@mixin btn-modifier($bg:$c-button-bg-color, $bg-hover:auto, $color:auto, $hover-color:auto, $border-width:$c-button-border-width, $border-color:auto, $border-hover-color:null, $radius:$c-button-radius, $disabled:false) {
+
+
+
+  @if $bg-hover == auto {
+    $bg-hover: if($bg == $c-button-bg-color, $c-button-bg-hover, scale-color($bg, $lightness: $c-button-function-factor));
+  }
+
+  @if ($border-color == auto) and not($bg == null) {
+    $border-color: if($bg == $c-button-bg-color, $c-button-border-color, scale-color($bg, $lightness: $c-button-function-factor));
+  }
+
+  $bg-lightness: 0;
+  $bg-hover-lightness: 0;
+
+
+  @if not($bg == null) {
+    $bg-lightness: lightness($bg);
+  } @else {
+    $border-color: null;
+  }
+
+  @if not($bg-hover == null) {
+    $bg-hover-lightness: lightness($bg-hover);
+  }
+
+  @if $hover-color == auto {
+    $hover-color: if($bg-hover-lightness > 70%, $c-button-font-color-alt, $c-button-font-color);
+  }
+
+
+  @if $color == auto {
+    $color: if($bg-lightness > 70%, $c-button-font-color-alt, $c-button-font-color);
+  }
+
+  background-color: $bg;
+  color: $color;
+  border-radius: $radius;
+
+  @if not($border-width == 0) {
+    box-shadow: inset 0 0 0 $border-width $border-color;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $bg-hover;
+    color: $hover-color;
+    @if $border-hover-color {
+      box-shadow: inset 0 0 0 $border-width $border-hover-color;
+    }
+  }
+
+
+  @if $disabled {
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.7;
+      box-shadow: none;
+
+      &:hover,
+      &:focus {
+        background-color: $bg;
+      }
+    }
+
+  }
+
+}

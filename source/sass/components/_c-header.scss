@@ -1,0 +1,132 @@
+.c-header {
+  $block: &;
+  position: relative;
+
+  &__logo {
+    text-align: center;
+
+    img {
+      display: inline-block;
+    }
+  }
+
+  &__description {
+    font-size: 26px;
+    color: $color-outer-space;
+  }
+
+  &__button,
+  &__register__button {
+    background: none;
+    border: 0;
+    color: $color-jade;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    padding-right: 50px;
+    cursor: pointer;
+
+    .circle {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(-50%, -50%);
+      border: 8px solid $color-jade;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      display: inline-block;
+      box-sizing: content-box;
+    }
+  }
+
+  &__register {
+    max-width: 600px;
+    width: 100%;
+    padding: 50px;
+    background: $color-jade;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    visibility: hidden;
+    pointer-events: none;
+
+    &__title {
+      color: $color-fun-green;
+    }
+
+    &__form {
+      &__group {
+        padding: 0 10px;
+        position: relative;
+
+        &__input {
+          border: 0;
+          border-bottom: 1px solid $color-white;
+          width: 100%;
+          background: none;
+          font-weight: bold;
+          font-size: 18px;
+          color: $color-white;
+          padding: 10px;
+          text-align: center;
+        }
+
+        .icon {
+          position: absolute;
+          right: 5px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 30px;
+          color: $color-white;
+          line-height: 30px;
+          cursor: pointer;
+        }
+
+        .c-button {
+          padding-right: 40px;
+        }
+      }
+    }
+
+    &__instruction {
+      .icon {
+        border-right: 1px solid rgba($color-white, .55);
+        color: $color-white;
+        font-size: 32px;
+        line-height: 32px;
+        box-sizing: content-box;
+        padding: 0 10px;
+
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+
+    &__button {
+      color: $color-fun-green;
+
+      .circle {
+        border-color: $color-fun-green;
+      }
+    }
+  }
+
+  &.form-open {
+    #{$block} {
+      &__logo,
+      &__description,
+      &__button {
+        filter: blur(3px);
+      }
+
+      &__register {
+        visibility: visible;
+        pointer-events: all;
+      }
+    }
+  }
+}

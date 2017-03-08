@@ -1,0 +1,23 @@
+.c-button {
+  @include btn-block();
+
+  &--primary {
+    @include btn-modifier();
+  }
+
+  &--secondary {
+    @include btn-modifier($bg:$secondary-color);
+  }
+
+  // &--custom {
+  //   @include btn-modifier($bg:#74a446, $radius:10px, $bg-hover:#618a3c, $border-width:3px);
+  // }
+
+  &--medium {
+    @include btn-size($padding-v:15px, $padding-h:50px, $font-size:1.1em);
+  }
+
+  &--tiny {
+    @include btn-size(5px, 10px, 10px);
+  }
+}

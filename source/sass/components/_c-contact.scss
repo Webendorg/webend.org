@@ -1,0 +1,64 @@
+.c-contact {
+  position: relative;
+
+  &::before {
+    content: "";
+    background: $color-wild-sand url("/assets/images/command-line-balloons-2.png") repeat-x center;
+    height: 100%;
+    width: 110%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(-1deg);
+    z-index: -1;
+  }
+
+  &__form {
+    &__group {
+      padding: 0 10px;
+      position: relative;
+
+      &__input {
+        border: 0;
+        border-bottom: 1px solid $color-jade;
+        width: 100%;
+        background: none;
+        font-weight: bold;
+        font-size: 18px;
+        color: $color-jade;
+        padding: 10px;
+      }
+
+      .icon {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        color: $color-white;
+        line-height: 30px;
+        cursor: pointer;
+      }
+
+      .c-button {
+        padding-right: 40px;
+      }
+    }
+  }
+
+  &__instruction {
+    .icon {
+      border-right: 1px solid rgba($global-border-color, .55);
+      color: $color-jade;
+      font-size: 32px;
+      line-height: 32px;
+      box-sizing: content-box;
+      padding: 0 10px;
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+}

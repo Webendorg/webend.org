@@ -1,0 +1,54 @@
+
+
+$c-radio-size: 18px;
+$c-radio-border-width: 1px;
+$c-radio-circle-size: 8px;
+
+.c-radio {
+  display: inline-block;
+  vertical-align: middle;
+
+  &__inp {
+    display: none;
+
+    &:checked + .c-radio__mask::before {
+      display: block;
+    }
+  }
+
+  &__mask {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: $c-radio-size;
+    height: $c-radio-size;
+    line-height: $c-radio-size;
+    border-radius: 50%;
+    cursor: pointer;
+    border-style: solid;
+    border-width: $c-radio-border-width;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: (($c-radio-size - $c-radio-circle-size - ($c-radio-border-width * 2)) / 2);
+      left: (($c-radio-size - $c-radio-circle-size - ($c-radio-border-width * 2)) / 2);
+      display: none;
+      width: $c-radio-circle-size;
+      height: $c-radio-circle-size;
+      border-radius: 50%;
+    }
+  }
+
+  &--primary {
+
+    > .c-radio__mask {
+      background-color: $color-silver;
+      border-color: $color-gainsboro;
+
+      &::before {
+        background-color: $primary-color;
+      }
+    }
+  }
+}
