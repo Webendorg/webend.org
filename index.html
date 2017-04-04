@@ -72,6 +72,13 @@
                                    placeholder="E-Posta" required/>
                         </div>
                         <div class="c-header__register__form__group u-gap-top-small">
+                            <select name="" id="" required class="c-selectbox">
+                                <option value="" disabled selected>Seçiniz</option>
+                                <option value="etkinlik">Etkinlik</option>
+                                <option value="workshop">Workshop</option>
+                            </select>
+                        </div>
+                        <div class="c-header__register__form__group u-gap-top-small">
                             <button type="submit" class="c-button c-button--primary">
                                 <span>Kayıt Ol</span>
                                 <i class="icon icon-arrow-right"></i>
@@ -241,8 +248,71 @@
             </div>
         </div>
     </div>
-    <div class="c-schedule u-gap-top-large">
-        <div class="container">
+    <div class="c-schedule u-gap-top-large u-pad-top-medium u-pad-bottom-large">
+        <div class="container u-gap-bottom-large">
+            <h2 class="u-text-center u-gap-bottom-large">Etkinlik Programı</h2>
+            <div class="c-schedule__list l-grid__col l-grid__col--lg-12 l-grid__col--md-12 l-grid__col--sm-12 l-grid__col--xs-12">
+                <div class="c-schedule__list__item">
+                    <time class="c-schedule__list__item__time">08:30 - 09:30</time>
+                    <h1 class="c-schedule__list__item__title">Kahve & Çay Servisi ile Tanışma</h1>
+                    <p class="c-schedule__list__item__location"></p>
+                </div>
+                <div class="c-schedule__list__item">
+                    <time class="c-schedule__list__item__time">09:30 - 09:50</time>
+                    <h1 class="c-schedule__list__item__title">Webend'in Hikayesi</h1>
+                    <p class="c-schedule__list__item__location">Emre YILMAZ</p>
+                </div>
+                <div class="c-schedule__list__item">
+                    <time class="c-schedule__list__item__time">10:00 - 10:40</time>
+                    <h1 class="c-schedule__list__item__title">Senin adın da Kemal olsun!</h1>
+                    <p class="c-schedule__list__item__location">Serdar Doğruyol</p>
+                </div>
+                <div class="c-schedule__list__item">
+                    <time class="c-schedule__list__item__time">10:50 - 11:30</time>
+                    <h1 class="c-schedule__list__item__title">VueJS benim için yapıldı.</h1>
+                    <p class="c-schedule__list__item__location">Fatih Acet</p>
+                </div>
+                <div class="c-schedule__list__item">
+                    <time class="c-schedule__list__item__time">11:40 - 12:20</time>
+                    <h1 class="c-schedule__list__item__title">Nesne bekleniyor. Satır: 1 Karakter: 1</h1>
+                    <p class="c-schedule__list__item__location">Burak Yiğit Kaya</p>
+                </div>
+                <div class="c-schedule__list__item">
+                    <time class="c-schedule__list__item__time">12:20 - 13:10</time>
+                    <h1 class="c-schedule__list__item__title">Yaşasın Yemek Yemek!</h1>
+                    <p class="c-schedule__list__item__location"></p>
+                </div>
+                <div class="c-schedule__list__item">
+                    <time class="c-schedule__list__item__time">13:10 - 13:50</time>
+                    <h1 class="c-schedule__list__item__title">PHP ile yaptık, oldu!</h1>
+                    <p class="c-schedule__list__item__location">Hüseyin Mert</p>
+                </div>
+                <div class="c-schedule__list__item">
+                    <time class="c-schedule__list__item__time">14:00 - 14:40</time>
+                    <h1 class="c-schedule__list__item__title">Undefined is not a function</h1>
+                    <p class="c-schedule__list__item__location">Fatih Kadir Akın</p>
+                </div>
+                <div class="c-schedule__list__item">
+                    <time class="c-schedule__list__item__time">14:50 - 15:30</time>
+                    <h1 class="c-schedule__list__item__title">Tekir sadece bir kedi değildir!</h1>
+                    <p class="c-schedule__list__item__location">Hakan Uygun</p>
+                </div>
+                <div class="c-schedule__list__item">
+                    <time class="c-schedule__list__item__time">15:40 - 16:20</time>
+                    <h1 class="c-schedule__list__item__title"></h1>
+                    <p class="c-schedule__list__item__location"></p>
+                </div>
+                <div class="c-schedule__list__item">
+                    <time class="c-schedule__list__item__time">16:30 - 17:10</time>
+                    <h1 class="c-schedule__list__item__title">??</h1>
+                    <p class="c-schedule__list__item__location">??</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="c-schedule c-schedule--secondary u-gap-top-large u-pad-top-medium u-pad-bottom-large">
+        <div class="container u-gap-bottom-large">
+            <h2 class="u-text-center u-gap-bottom-large u-color-white">Workshop Programı</h2>
             <div class="c-schedule__list l-grid__col l-grid__col--lg-12 l-grid__col--md-12 l-grid__col--sm-12 l-grid__col--xs-12">
                 <div class="c-schedule__list__item">
                     <time class="c-schedule__list__item__time">08:30 - 09:30</time>
@@ -585,9 +655,16 @@
                                 <input type="text" name="name" class="c-contact__form__group__input u-text-center"
                                        placeholder="Adınız Soyadınız" required/>
                             </div>
-                            <div class="c-contact__form__group u-gap-bottom-small">
+                            <div class="c-contact__form__group">
                                 <input type="email" name="email" class="c-contact__form__group__input u-text-center"
                                        placeholder="E-Posta" required/>
+                            </div>
+                            <div class="c-contact__form__group u-gap-top-small u-gap-bottom-small">
+                                <select name="" id="" required class="c-selectbox">
+                                    <option value="" disabled selected>Seçiniz</option>
+                                    <option value="etkinlik">Etkinlik</option>
+                                    <option value="workshop">Workshop</option>
+                                </select>
                             </div>
                             <div class="c-contact__form__group u-gap-bottom-small">
                                 <button type="submit" class="c-button c-button--primary">
