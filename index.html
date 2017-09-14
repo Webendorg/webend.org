@@ -741,6 +741,25 @@
                         </div>
                     </div>
                 </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFive">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <span class="question"><span>S</span></span> Destekçi bileti ödemesini nasıl yapacağım?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
+                         aria-labelledby="headingFive">
+                        <div class="panel-body">
+                            <p>
+                                Destekçi bileti önkayıt işleminizi gerçekleştirdikten sonra eposta ile tarafınıza
+                                ulaşılacaktır.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -977,7 +996,44 @@
     ga('create', 'UA-94067950-1', 'auto');
     ga('send', 'pageview');
 
-    !function(e){function t(){function e(){return Math.floor(65536*(1+Math.random())).toString(16).substring(1)}return e()+e()+"-"+e()+"-"+e()+"-"+e()+"-"+e()+e()+e()}function a(e){return/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(e)}e(document).on("change","#event_plan",function(){"SupporterTicket"===e(":checked",this).val()?e("#supporterticket_warning").removeClass("hidden"):e("#supporterticket_warning").addClass("hidden")});var n={apiKey:"AIzaSyBwVB_lCzIKDMplZvC2VcvpDtOmBs9daxA",authDomain:"webend-562f5.firebaseapp.com",databaseURL:"https://webend-562f5.firebaseio.com",projectId:"webend-562f5",storageBucket:"",messagingSenderId:"173751392246"};firebase.initializeApp(n);var i=function(e){firebase.database().ref("attendies/"+t()).set({name:e.name,email:e.email,tickettype:e.tickettype,numberofseats:e.numberofseats})};e(document).on("submit","#registerform",function(){var t={};return t.name=e('[name="name"]',this).val(),t.email=e('[name="email"]',this).val(),t.tickettype=e('[name="tickettype"]').val(),t.numberofseats=e('[name="numberofseats"]').val(),t.name&&t.email&&t.tickettype&&t.numberofseats?a(t.email)?(i(t),e("#modalclose").click(),"SupporterTicket"===t.tickettype?alert("Kaydınız başarıyla tamamlanmıştır. Destekçi bileti ödemenizi gerçekleştirdikten sonra eposta yoluyla bilgi@webend.org'a dekontunuz göndermeyi unutmayınız."):alert("Kaydınız başarıyla gerçekleştirilmiştir."),!1):(alert("Eposta adresiniz geçersizdir. Lütfen kontrol edip tekrar deneyiniz."),!1):(alert("Tüm alanları doldurmanız gerekmektedir."),!1)})}(jQuery);
+    !function (e) {
+        function t() {
+            function e() {
+                return Math.floor(65536 * (1 + Math.random())).toString(16).substring(1)
+            }
+
+            return e() + e() + "-" + e() + "-" + e() + "-" + e() + "-" + e() + e() + e()
+        }
+
+        function a(e) {
+            return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(e)
+        }
+
+        e(document).on("change", "#event_plan", function () {
+            "SupporterTicket" === e(":checked", this).val() ? e("#supporterticket_warning").removeClass("hidden") : e("#supporterticket_warning").addClass("hidden")
+        });
+        var n = {
+            apiKey: "AIzaSyBwVB_lCzIKDMplZvC2VcvpDtOmBs9daxA",
+            authDomain: "webend-562f5.firebaseapp.com",
+            databaseURL: "https://webend-562f5.firebaseio.com",
+            projectId: "webend-562f5",
+            storageBucket: "",
+            messagingSenderId: "173751392246"
+        };
+        firebase.initializeApp(n);
+        var i = function (e) {
+            firebase.database().ref("attendies/" + t()).set({
+                name: e.name,
+                email: e.email,
+                tickettype: e.tickettype,
+                numberofseats: e.numberofseats
+            })
+        };
+        e(document).on("submit", "#registerform", function () {
+            var t = {};
+            return t.name = e('[name="name"]', this).val(), t.email = e('[name="email"]', this).val(), t.tickettype = e('[name="tickettype"]').val(), t.numberofseats = e('[name="numberofseats"]').val(), t.name && t.email && t.tickettype && t.numberofseats ? a(t.email) ? (i(t), e("#modalclose").click(), "SupporterTicket" === t.tickettype ? alert("Kaydınız başarıyla tamamlanmıştır. Destekçi bileti ödemenizi gerçekleştirdikten sonra eposta yoluyla bilgi@webend.org'a dekontunuz göndermeyi unutmayınız.") : alert("Kaydınız başarıyla gerçekleştirilmiştir."), !1) : (alert("Eposta adresiniz geçersizdir. Lütfen kontrol edip tekrar deneyiniz."), !1) : (alert("Tüm alanları doldurmanız gerekmektedir."), !1)
+        })
+    }(jQuery);
 
 </script>
 </body>
