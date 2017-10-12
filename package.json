@@ -1,0 +1,20 @@
+{
+  "name": "webend.org",
+  "version": "1.0.0",
+  "description": "webend.org",
+  "main": "index.js",
+  "dependencies": {
+    "firebase-tools": "^3.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/Webendorg/webend.org.git",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Webendorg/webend.org/issues"
+  },
+  "homepage": "https://github.com/Webendorg/webend.org#readme"
+}
