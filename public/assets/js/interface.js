@@ -111,7 +111,7 @@ $(function(e) {
 	-------------------------------------------------------------------*/
   // 2018[year] - 4[month] - 22[day]
   
-  $('#countdown').countdown('2017/10/21', function(event) {
+  $('#countdown').countdown('2018/05/26', function(event) {
 	$(this).html(event.strftime('<span class="countdown-period">%-D <span>Gün</span></span> <span class="countdown-period">%H <span>Saat</span></span> <span class="countdown-period">%M <span>Dakika</span></span> <span class="countdown-period">%S <span>Saniye</span></span>'));
   });
   
